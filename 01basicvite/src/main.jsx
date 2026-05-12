@@ -10,16 +10,11 @@ function DisplaySM(){
       )
 }
 const ReactElement = (<h1>baapo ka baap bhavya</h1>)
-const ReactELemFromReact = React.createElement("a",
-      {
-            href:"http://zapp.wuaze.com",
-            target:"_blank"
-      },
-      "My website"
+const ReactELemFromReact = React.createElement("h1",
+     "Custom React Element using createElement"
 )
 
 createRoot(document.getElementById('root')).render(
-      
       ReactELemFromReact
      
 )
