@@ -8,11 +8,11 @@ function App() {
 
   const [count, setCounter] = useState(0)
 
-//   function addVal(){
-//     if(count<20){
-//   setCounter(count+1)
-//   }
-// }
+  function addVal(){
+    if(count<20){
+  setCounter(count+1)
+  }
+}
 
   // function removeVal(){
   //   if(count>0){
