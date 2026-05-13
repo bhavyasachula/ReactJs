@@ -14,11 +14,11 @@ function App() {
   }
 }
 
-  // function removeVal(){
-  //   if(count>0){
-  //   setCounter(count-1)
-  // }
-//}
+  function removeVal(){
+    if(count>0){
+    setCounter(count-1)
+  }
+}
   return (
     <>
      <h1>Counter value:{count}</h1>
