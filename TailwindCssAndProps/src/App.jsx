@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <div className='h-100 items-center'>
-     
+      <h1 className='p-10 m-10 flex  justify-center bg-red-400'>Tailwind and props</h1>
     </div>
     </>
   )
