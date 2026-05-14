@@ -1,9 +1,9 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 
-function BasicExample({props}) {
+
+function BasicExample(props) {
+  console.log(props)
   return (
-   <div>{props}</div>
+   <div className="bg-red-200">{props}</div>
   );
 }
 
