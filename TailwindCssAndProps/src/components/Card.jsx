@@ -5,7 +5,8 @@ function BasicExample(props) {
   // recieved the username 
   // baapokabaapbhavya
   return (
-   <div className="bg-red-200">{props}</div>
+   <div className="bg-red-200">{props}  <h1>hello world</h1></div>
+
   );
 }
 
