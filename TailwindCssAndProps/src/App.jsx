@@ -1,16 +1,28 @@
 import { useState } from 'react'
 // import './App.css'
-import Card from "./components/Card.jsx"
 
-function App() {
-  const [count, setCount] = useState(0)
+
+function App(Props) {
+  const [color, setColor] = useState("")
 
   return (
     <>
-    <div className='h-100 items-center'>
-      <h1 className='p-10 m-10 flex  justify-center bg-red-400'>Tailwind and props</h1>
+    <div className='flex flex-warp gap-10 h-screen justify-center items-center ' style={{backgroundColor:color}}>
+
+      <button className='bg-red-700 p-2 rounded-2xl'
+      onClick={()=>{
+        setColor("red")
+      }}>Red</button>
+        <button className='bg-blue-700 p-2 rounded-2xl'
+      onClick={()=>{
+        setColor("blue")
+      }}>blue</button>
+        <button className='bg-green-700 p-2 rounded-2xl'
+      onClick={()=>{
+        setColor("green")
+      }}>green</button>
+      
     </div>
-      <Card username="Baapokabaapbhavya"/>
     </>
   )
 }
