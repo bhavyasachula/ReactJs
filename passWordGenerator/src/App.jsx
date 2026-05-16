@@ -53,6 +53,7 @@ function App() {
         setCharAllowed((prev)=>!prev)
 
       }}/>
+      <label >SpecialChar</label>
       
       </div>  
      </div>
