@@ -32,6 +32,7 @@ function App() {
           className='outline-none  w-full py-1 px-3'/>
           <button className='p-2 outline-none bg-blue-600 text-white'>copy</button>
       </div>
+      <div className='flex align-center gap-1'>
       <input 
       type="range"
       min={5}
@@ -40,9 +41,17 @@ function App() {
       onChange={(e)=>{setlength(e.target.value)}}
        />
       <label>range:</label>
-      <label >{length}</label> 
-      </div>  
+      <label>{length}</label> 
+      
+      <input type="checkbox" 
+      onChange={()=>{
+        setNumberAllowed( (prev) => !prev )
+      }}/>
+      <label >Numbers</label>
      
+      
+      </div>  
+     </div>
     </>
   )
 }
