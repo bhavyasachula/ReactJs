@@ -48,7 +48,11 @@ function App() {
         setNumberAllowed( (prev) => !prev )
       }}/>
       <label >Numbers</label>
-     
+      <input type='checkbox'
+      onChange={()=>{
+        setCharAllowed((prev)=>!prev)
+
+      }}/>
       
       </div>  
      </div>
