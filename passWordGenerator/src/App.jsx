@@ -31,7 +31,17 @@ function App() {
           value={password}
           className='outline-none  w-full py-1 px-3'/>
           <button className='p-2 outline-none bg-blue-600 text-white'>copy</button>
-      </div></div>  
+      </div>
+      <input 
+      type="range"
+      min={5}
+      max={30}
+      value={length}
+      onChange={(e)=>{setlength(e.target.value)}}
+       />
+      <label>range:</label>
+      <label >{length}</label> 
+      </div>  
      
     </>
   )
