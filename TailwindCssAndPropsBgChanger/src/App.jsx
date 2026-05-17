@@ -3,7 +3,7 @@ import  React  from 'react'
 
 
 function App(Props) {
-  const [color, setColor] = React.useState("red")
+  const [color, setColor] = React.useState("white")
 
   return (
     <>
