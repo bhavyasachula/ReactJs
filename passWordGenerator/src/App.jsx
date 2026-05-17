@@ -31,7 +31,9 @@ function App() {
         <input type="text" 
           value={password}
           className='outline-none  w-full py-1 px-3'/>
-          <button className='p-2 outline-none bg-blue-600 text-white'>copy</button>
+          <button className='p-2 outline-none bg-blue-600 text-white'
+          onClick={CopytoClipboard}
+          >copy</button>
       </div>
       <div className='flex align-center gap-1'>
       <input 
@@ -40,6 +42,7 @@ function App() {
       max={30}
       value={length}
       onChange={(e)=>{setlength(e.target.value)}}
+      ref={password}
        />
       <label>range:</label>
       <label>{length}</label> 
