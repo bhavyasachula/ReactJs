@@ -1,11 +1,12 @@
-import { useEffect,useState,useCallback } from 'react'
-
+import { useEffect,useState,useCallback,useRef } from 'react'
+import * as React from 'react'
 function App() {
   const [length, setlength] = useState(8)
   const [numberAllowed,setNumberAllowed] = useState(false)
   const [charAllowed,setCharAllowed] = useState(false)
   const [password,setPassword] = useState("")
 
+  const passwordRef = useRef()
   const passwordGenerator =  useCallback(()=>{
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
