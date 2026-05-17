@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import  React  from 'react'
 // import './App.css'
 
 
 function App(Props) {
-  const [color, setColor] = useState("")
+  const [color, setColor] = React.useState("red")
 
   return (
     <>

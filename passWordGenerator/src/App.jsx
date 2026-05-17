@@ -51,7 +51,6 @@ function App() {
       <input type='checkbox'
       onChange={()=>{
         setCharAllowed((prev)=>!prev)
-
       }}/>
       <label >SpecialChar</label>
       
