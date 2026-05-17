@@ -22,7 +22,7 @@ function App() {
   },[length,numberAllowed,charAllowed])
     
   const CopytoClipboard = useCallback(()=>{
-
+    window.navigator.clipboard.writeText(password) // simple javascript
   },[password])
   useEffect(()=>{
     passwordGenerator()
