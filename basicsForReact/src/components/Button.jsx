@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 function Button({text}) {
-  const [color,colorChanger] = useState("red")
+  const [color,colorChanger] = useState(["red","blue","green","yellow"])
 const handleonclick=()=>{
   colorChanger(["blue","green","yellow"])
 }
