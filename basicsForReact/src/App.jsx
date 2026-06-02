@@ -1,10 +1,17 @@
 
 import React from 'react'
 import Button from './components/Button'
+import {useState} from 'react'
 function App() {
+  const [a,b] = useState(true)
   return (
    <>
-  <Button props="clickme"/>
+   <div class>
+  <Button text="clickme"/>
+    <Button text="hello"/>
+      <Button text="clickme"/>
+        <Button text="hello"/>
+   </div>
    </>
   )
 }

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-function Button({props}) {
-  console.log(props)
+function Button({text}) {
+
   return (
     <>
-    <button>{props}</button>
+    <button className={`${text==="clickme"?"bg-red-400":"bg-blue-200"}`}>{text}</button>
     </>
     )
 }
