@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function Button({text}) {
   const [color,colorChanger] = useState("red")
 const handleonclick=()=>{
-  colorChanger("blue")
+  colorChanger(["blue","green","yellow"])
 }
   return (
     <>
