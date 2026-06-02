@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 
 function Button({text}) {
-
+  const [color,colorChanger] = useState("red")
+const handleonclick=()=>{
+  colorChanger(color="blue")
+}
   return (
     <>
-    <button className={`${text==="clickme"?"bg-red-400":"bg-blue-200"}`}>{text}</button>
+    <button onclick={handleonclick}
+    className={`bg-${color}-=600`}>{text}</button>
     </>
     )
 }
