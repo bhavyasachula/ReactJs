@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Button() {
+function Button({props}) {
+  console.log(props)
   return (
-    <button>helloworld</button>
-  )
+    <>
+    <button>{props}</button>
+    </>
+    )
 }
 
 export default Button
