@@ -6,7 +6,7 @@ function App() {
   const [a,b] = useState(true)
   return (
    <>
-   <div class>
+   <div className="flex justify-center align-center flex-col">
   <Button text="clickme"/>
     <Button text="hello"/>
       <Button text="clickme"/>
