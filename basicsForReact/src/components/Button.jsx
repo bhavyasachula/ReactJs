@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 
 function Button({text}) {
-  const [color,colorChanger] = useState(["red","blue","green","yellow"])
-const handleonclick=()=>{
-  colorChanger(["blue","green","yellow"])
+  const colour = ["red","blue","green","yellow"]
+  const [index,setIndex] = useState(0)
+  
+  const handleonclick=()=>{
+  setIndex((prev)=>(prev+1)% colour.length)
 }
   return (
     <>
     <button onClick={handleonclick}
-    className={`bg-${color}-600`}>{text}</button>
+    className={`bg-${colour[index]}-600`}>{text}</button>
     </>
     )
 }
