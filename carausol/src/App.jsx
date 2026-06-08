@@ -10,8 +10,8 @@ function App() {
   return (
       <>
         <div className='Container'>
-          <div><img src="" alt="" /></div>
-          <div><img src="" alt="" /></div>
+          <div className='bg-red-100'><img src="" alt="" /></div>
+          <div className='bg-blue-100'><img src="" alt="" /></div>
           <div><img src="" alt="" /></div>
           <div><img src="" alt="" /></div>
         </div>
