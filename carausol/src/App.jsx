@@ -9,11 +9,11 @@ function App() {
 
   return (
       <>
-        <div className='Container'>
-          <div className='bg-red-100'><img src="" alt="" /></div>
-          <div className='bg-blue-100'><img src="" alt="" /></div>
-          <div><img src="" alt="" /></div>
-          <div><img src="" alt="" /></div>
+        <div className='Container b-1 h-100 w-100 '>
+          <div className='bg-red-100'>1<img src="" alt="" /></div>
+          <div className='bg-blue-100'>2<img src="" alt="" /></div>
+          <div className='bg-yellow-100' >3<img src="" alt="" /></div>
+          <div className='bg-green-100'>4<img src="" alt="" /></div>
         </div>
       </>
   )
