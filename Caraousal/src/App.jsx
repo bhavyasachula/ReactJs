@@ -33,11 +33,11 @@ function prevImg(){
     clearInterval(interval)}
  },[index])
 //feat: user can upload thier own photo to watch the slideshow
-const mouseEnter=()=>{
-  console.log("mouse entered")
+const stopSlider=()=>{
+  clearInterval()
 }
 
-const mouseLeave = () =>{
+const startSlider = () =>{
  console.log("mouse leave")
 }
   return (
@@ -45,7 +45,7 @@ const mouseLeave = () =>{
     <div className='outer flex justify-center align-center w-full h-screen border border-black p-2 '>
        {/* <button className='border border-black bg-orange-500 mt-[200px]' onClick={prevImg}>prev</button> */}
       <div className='Container m-2 overflow-hidden p-2'>
-          <div className="boxes w-[1200px] h-[800px]" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}><img className="" src={images[index]} alt="" /></div>
+          <div className="boxes w-[1200px] h-[800px]" onMouseEnter={stopSlider} onMouseLeave={startSlider}><img className="" src={images[index]} alt="" /></div>
       </div>
       {/* <button className='border border-black bg-blue-700 mt-[200px] ' onClick={nextImg}>next</button> */}
      </div>
