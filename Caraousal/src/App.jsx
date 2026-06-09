@@ -38,7 +38,7 @@ function prevImg(){
     <>
     <div className='outer flex justify-center align-center w-full h-screen border border-black p-2 '>
        <button className='border border-black bg-orange-500 mt-[200px]' onClick={prevImg}>prev</button>
-      <div className='Container flex flex-row m-2 border border-black w-[921px] h-[425px] overflow-hidden p-2'>
+      <div className='Container flex flex-row m-2 w-[921px] h-[425px] overflow-hidden p-2'>
           <div className="boxes"><img src={images[index]} alt="" /></div>
       </div>
       <button className='border border-black bg-blue-700 mt-[200px] ' onClick={nextImg}>next</button>
