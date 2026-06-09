@@ -1,9 +1,6 @@
 .boxes{
-    height: 400px;
-    width: 900px;
-    text-align: center;
+   text-align: center;
     margin: 4px;
-    
     flex-shrink: 0;
 }
 img{
