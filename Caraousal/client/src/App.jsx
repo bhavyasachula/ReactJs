@@ -58,7 +58,7 @@ const startSlider = () =>{
 
   return (
     <>
-   <div className='navOuterDiv h-[60px] text-white p-1 text-xl '>
+   <div className='navOuterDiv h-[60px] text-white p-1 text-xl'>
     <nav className='flex flex-row justify-around items-center'>
       <b><i>Image Slider</i></b>
       <b><i><button>Upload</button></i></b>
