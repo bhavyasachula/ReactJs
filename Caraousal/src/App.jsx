@@ -56,7 +56,6 @@ const startSlider = () =>{
   }, 2000);
 }
 
-
   return (
     <>
    <div className='navOuterDiv h-[60px] text-white p-1 text-xl '>
