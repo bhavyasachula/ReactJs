@@ -23,7 +23,7 @@ app.post("/upload",async(req,res)=>{
     const {url} = req.body
     const result = await PostgresConn.query('SELECT MAX(id) as maxid FROM "sliderUrl" ');
     const nextid = Number(result.rows[0].maxid) + 1
-    const response = await PostgresConn.query('INSERT into "sliderUrl(id,url) values($1,$2)"',[nextid,url])
+    const response = await PostgresConn.query('INSERT into "sliderUrl"(id,url) values($1,$2)',[nextid,url]);
     console.log(response)
     res.send("saved")
 })
