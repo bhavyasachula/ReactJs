@@ -63,7 +63,10 @@ const startSlider = () =>{
 const handleForm = async(e) =>{
 
   try{
-  const response = await axios.post("http://localhost:2000/upload",{ url:url.current.value,});
+  const response = await axios.post("http://localhost:2000/upload",{ 
+    url:url.current.value
+  });
+  
   console.log(response.data)
   }
   catch(error){

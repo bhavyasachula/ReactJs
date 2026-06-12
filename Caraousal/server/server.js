@@ -3,7 +3,7 @@ const cors = require("cors")
 const app = express()
 const PostgresConn = require("./databasePg")
 
-
+app.use(express.json())
 app.use(cors())
 
 async function connection() {
@@ -29,7 +29,8 @@ app.get("/",(req,res)=>{
 //   return result.rows;
 
 app.post("/upload",(req,res)=>{
-    res.send()
+    console.log(req.body)
+    res.send("recieved")
 })
 app.listen("2000",()=>{
     console.log("http://localhost:2000/")
