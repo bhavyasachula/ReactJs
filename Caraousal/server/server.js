@@ -28,8 +28,8 @@ app.get("/",(req,res)=>{
 
 //   return result.rows;
 
-app.get("/upload",(req,res)=>{
-    console.log(req.body);
+app.post("/upload",(req,res)=>{
+    res.send()
 })
 app.listen("2000",()=>{
     console.log("http://localhost:2000/")

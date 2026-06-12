@@ -61,18 +61,13 @@ const startSlider = () =>{
 }
 
 const handleForm = async(e) =>{
-  e.preventDefault()
 
   try{
-  const response = await axios.post(
-    "http://localhost:2000/upload",{
-    url:url.current.value,
-  });
-  console.log(response.data )
+  const response = await axios.post("http://localhost:2000/upload",{ url:url.current.value,});
+  console.log(response.data)
   }
   catch(error){
     console.log(error);
-    
   };
   
 }
@@ -86,8 +81,8 @@ const handleForm = async(e) =>{
         Upload
         </button></i></b>
    </nav>
-    {
-  showinput ?
+    { showinput 
+    ?
   <div className="fixed inset-0 flex justify-center items-center bg-black/40 backdrop-blur-sm z-50">
 
     <form className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-2xl flex flex-col gap-4 w-[500px]"
