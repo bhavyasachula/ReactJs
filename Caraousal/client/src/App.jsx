@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
-
+import axios from 'axios'
 
 import './App.css'
 
 function App() {
   const [index, setIndex] = useState(0);
+  const [showinput,setShowInput] = useState(false)
   const intervalref = useRef(null)
+  const url = useRef()
 
   const images = [
   "https://images.unsplash.com/photo-1706805169488-73a001000382?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -40,7 +42,9 @@ useEffect(()=>{
  },[index])
 
 //feat: user can upload thier own photo to watch the slideshow
-
+const handleInput = () => {
+  setShowInput(!showinput)
+}
 
 const stopSlider=()=>{
   clearInterval(intervalref.current)
@@ -56,19 +60,80 @@ const startSlider = () =>{
   }, 2000);
 }
 
+const handleForm = async(e) =>{
+  e.preventDefault()
+
+  try{
+  const response = await axios.post(
+    "http://localhost:2000/upload",{
+    url:url.current.value,
+  });
+  console.log(response.data )
+  }
+  catch(error){
+    console.log(error);
+    
+  };
+  
+}
+
   return (
     <>
    <div className='navOuterDiv h-[60px] text-white p-1 text-xl '>
     <nav className='flex flex-row justify-around items-center'>
       <b><i>Image Slider</i></b>
-      <b><i><button>Upload</button></i></b>
+      <b><i><button onClick={handleInput}>
+        Upload
+        </button></i></b>
    </nav>
+    {
+  showinput ?
+  <div className="fixed inset-0 flex justify-center items-center bg-black/40 backdrop-blur-sm z-50">
+
+    <form className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-2xl flex flex-col gap-4 w-[500px]"
+      action={handleForm}>
+
+      <h2 className="text-white text-2xl text-center">
+        Upload Image
+      </h2>
+
+      <input
+        type="text"
+        ref={url}
+        placeholder="Enter image URL"
+        className="bg-white/20 border border-white/30 rounded-md p-3 text-white placeholder-gray-300 outline-none"
+      />
+
+      <div className="flex gap-3 justify-center">
+        <input
+          type="submit"
+          value="Submit"
+          className="submitbtn bg-gradient-to-r from-green-400 to-blue-500 focus:from-pink-500 focus:to-yellow-500 text-white p-2 rounded-md cursor-pointer"
+        />
+
+        <input
+          type="button"
+          onClick={() => setShowInput(false)} 
+          value="Close"
+          className="closebtn bg-red-600 text-white px-4 py-3 rounded-md"
+        />
+    
+
+      </div>
+
+    </form>
+
+  </div>
+  :
+  ""
+}
+
    </div>
     <div className='outer flex justify-center align-center w-full h-[990px] '>
      
        {/* <button className='border border-black bg-orange-500 mt-[200px]' onClick={prevImg}>prev</button> */}
       <div className='Container flex justify-center align-center m-2 overflow-hidden p-2 m-[60px]'>
-          <div className="boxes w-[1200px] h-[800px]" onMouseEnter={stopSlider} onMouseLeave={startSlider}><img className="" src={images[index]} alt="" /></div>
+          <div className="boxes w-[1200px] h-[800px] " onMouseEnter={stopSlider} onMouseLeave={startSlider}><img className="" src={images[index]} alt="" /></div>
       </div>
       {/* <button className='border border-black bg-blue-700 mt-[200px] ' onClick={nextImg}>next</button> */}
      </div>
