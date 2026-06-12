@@ -2,12 +2,20 @@
   background-image: linear-gradient(135deg, #1a0533, #3b1f6e, #0d0d1a);
 }
 
+.closebtn{
+  background-image:linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+.submitbtn{
+  background-image: linear-gradient(135deg, #1a0533, #3b1f6e, #0d0d1a);
+}
+
 .boxes{
  box-shadow:6px 5px 10px rgb(10 0 12 / 43%);
    text-align: center;
     margin: 4px;
     flex-shrink: 0;
      border-radius: 3%;
+     z-index: 0;
 }
 img{
   border-radius: 3%;
