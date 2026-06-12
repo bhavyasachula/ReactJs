@@ -61,18 +61,21 @@ const startSlider = () =>{
 }
 
 const handleForm = async(e) =>{
-
+  console.log(e)
   try{
   const response = await axios.post("http://localhost:2000/upload",{ 
     url:url.current.value
   });
-  
+
   console.log(response.data)
+
   }
   catch(error){
     console.log(error);
   };
-  
+    setShowInput(false)
+  url.current.value = "";
+
 }
 
   return (
@@ -89,7 +92,7 @@ const handleForm = async(e) =>{
   <div className="fixed inset-0 flex justify-center items-center bg-black/40 backdrop-blur-sm z-50">
 
     <form className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-2xl flex flex-col gap-4 w-[500px]"
-      action={handleForm}>
+      onSubmit={handleForm}>
 
       <h2 className="text-white text-2xl text-center">
         Upload Image
@@ -107,6 +110,7 @@ const handleForm = async(e) =>{
           type="submit"
           value="Submit"
           className="submitbtn bg-gradient-to-r from-green-400 to-blue-500 focus:from-pink-500 focus:to-yellow-500 text-white p-2 rounded-md cursor-pointer"
+          
         />
 
         <input
