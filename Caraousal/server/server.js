@@ -28,10 +28,19 @@ app.post("/upload",async(req,res)=>{
     res.send("saved")
 })
 
-app.get("/transfer",(req,res)=>{
-console.log("helloi");
+app.get("/fetchUrl",async (req,res)=>{
+    const result = await PostgresConn.query('SELECT * from "sliderUrl" ')
 
+    //First way to loop throught the data
+    // for(let i=0 ; i<result.rows.length;i++){
+    //      res.send(result.rows[i].url)
+    // }
+
+    //Second way to loop through the data
+    const urls = result.rows.map(row => row.url)
+    res.json(urls)
 })
+
 app.listen("2000",()=>{
     console.log("http://localhost:2000/")
 })
