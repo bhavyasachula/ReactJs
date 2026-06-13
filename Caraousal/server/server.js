@@ -1,17 +1,12 @@
 const express = require("express")
 const cors = require("cors")
 const app = express()
-const PostgresConn = require("./databasePg")
+const PostgresConn = require("./config/databasePg")
+const connection = require("./config/dbconnection")
 
 app.use(express.json())
 app.use(cors())
 
-async function connection() {
-
- PostgresConn.connect().then(()=>{
-    console.log("database Connected");
-})
-}
 connection()
 
 app.get("/",(req,res)=>{
@@ -24,7 +19,6 @@ app.post("/upload",async(req,res)=>{
     const result = await PostgresConn.query('SELECT MAX(id) as maxid FROM "sliderUrl" ');
     const nextid = Number(result.rows[0].maxid) + 1
     const response = await PostgresConn.query('INSERT into "sliderUrl"(id,url) values($1,$2)',[nextid,url]);
-    console.log(response)
     res.send("saved")
 })
 
@@ -37,10 +31,11 @@ app.get("/fetchUrl",async (req,res)=>{
     // }
 
     //Second way to loop through the data
-    const urls = result.rows.map(row => row.url)
+    const urls = result.rows.map(row => row.url) ;
     res.json(urls)
 })
 
 app.listen("2000",()=>{
-    console.log("http://localhost:2000/")
+    console.log("server running at 'http://localhost:2000'");
+    
 })
