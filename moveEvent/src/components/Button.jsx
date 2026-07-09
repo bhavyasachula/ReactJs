@@ -49,8 +49,7 @@ function Button() {
         >
           <img
             src="/arrowPurple.png"
-            className='block w-full h-full '
-            draggable="false"
+            className='block w-full h-full'
           />
         </div>
       </div>
