@@ -30,27 +30,30 @@ function Button() {
 
   return (
     <div className='h-screen w-screen flex justify-center items-center'>
+    <div className='innerBox relative h-[80px] w-[80px] border overflow-hidden flex justify-center items-center'>
       <div
-        className='innerBox relative h-[70px] w-[70px] rounded-3xl border overflow-hidden m-2'
+        className='innerBox relative h-[70px] w-[70px] border overflow-hidden '
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
         <div
-          className='absolute '
+          className='absolute'
           style={{
             left: `${position.x}px`,
             top: `${position.y}px`,
             width: `${arrowSize}px`,
             height: `${arrowSize}px`,
             transform: 'translate(-50%, -50%)',
+            transition:'0.26s ease-out'
           }}
         >
           <img
-            src="/arrowimage2.png"
-            className='block w-full h-full'
+            src="/arrow2.png"
+            className='block w-full h-full '
           />
         </div>
       </div>
+    </div>
     </div>
   )
 }
