@@ -32,7 +32,7 @@ function Button() {
     <div className='h-screen w-screen flex justify-center items-center'>
     <div className='innerBox relative h-[80px] w-[80px] border overflow-hidden flex justify-center items-center'>
       <div
-        className='innerBox relative h-[70px] w-[70px] border overflow-hidden '
+        className='innerBox relative h-[70px] w-[70px]  overflow-hidden '
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
@@ -48,12 +48,12 @@ function Button() {
           }}
         >
           <img
-            src="/arrow2.png"
+            src="/arrowPurple.png"
             className='block w-full h-full '
           />
         </div>
       </div>
-    </div>
+    </div>  
     </div>
   )
 }
