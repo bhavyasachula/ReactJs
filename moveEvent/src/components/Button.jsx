@@ -37,7 +37,7 @@ function Button() {
         onMouseLeave={handleMouseLeave}
       >
         <div
-          className='absolute'
+          className='absolute '
           style={{
             left: `${position.x}px`,
             top: `${position.y}px`,
@@ -49,7 +49,8 @@ function Button() {
         >
           <img
             src="/arrowPurple.png"
-            className='block w-full h-full select-none'
+            className='block w-full h-full '
+            draggable="false"
           />
         </div>
       </div>
