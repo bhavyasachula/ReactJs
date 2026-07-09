@@ -49,7 +49,7 @@ function Button() {
         >
           <img
             src="/arrowPurple.png"
-            className='block w-full h-full '
+            className='block w-full h-full select-none'
           />
         </div>
       </div>
