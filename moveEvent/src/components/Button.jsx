@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 function Button() {
-  const boxSize = 70
-  const arrowSize = 25
+  const boxSize = 30
+  const arrowSize = 10
   const half = arrowSize / 2
 
   const [position, setPosition] = useState({
@@ -11,7 +11,7 @@ function Button() {
   })
   const handleMouseLeave=(e)=>{
     
-    setPosition({x:35,y:35})
+    setPosition({x:15,y:15})
     
   }
 
@@ -29,10 +29,11 @@ function Button() {
   }
 
   return (
-    <div className='h-screen w-screen flex justify-center items-center'>
-    <div className='innerBox relative h-[80px] w-[80px] border overflow-hidden flex justify-center items-center'>
+    <div className='relative h-screen  w-screen flex justify-center items-center'>
+        <button className='absolute bottom-12 right-4'>
+    <div className='innerBox relative h-[40px] w-[40px] border overflow-hidden flex justify-center items-center'>
       <div
-        className='innerBox relative h-[70px] w-[70px]  overflow-hidden '
+        className='innerBox relative h-[30px] w-[30px]  overflow-hidden '
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
@@ -54,8 +55,9 @@ function Button() {
         </div>
       </div>
     </div>  
+    </button>
     </div>
   )
 }
 
-export default Button
+export default Button;
