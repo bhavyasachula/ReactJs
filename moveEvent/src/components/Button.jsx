@@ -1,19 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Button() {
-    function handleMouseMove(){
-        console.log("Mouse entered");
+    const [position,setPosition] = useState({x:0,y:0});
+    const handleMouseMove=(e)=>{
+        const rect = e.currentTarget.getBoundingClientRect();
+        const x = e.ClientX - rect.left;
+        const y = e.ClientY - rect.top;
+        setPosition(x,y);
     }
-    function mouseOut(){
-        console.log("Mouse OUtt");
-    }
+  
   return (
     <>
     <div className='Box border h-screen w-screen flex justify-center items-center '>
         <div className='innerBox rounded-3xl h-[70px] w-[70px] flex justify-center items-center p-2'
         onMouseMove={handleMouseMove}>
             <div className='follow  p-1'
-            >↑</div>
+            style={{
+                left:`${position.x}px`,
+                top:`${position.y}px`,
+                transform:'translate(-50%,-50%)'
+            }}
+            >
+                ↑
+            </div>
         </div>
     </div>
     </>
