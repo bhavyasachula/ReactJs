@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function Button() {
   const boxSize = 30
-  const arrowSize = 10
+  const arrowSize = 8
   const half = arrowSize / 2
   const center = boxSize / 2
 
@@ -34,13 +34,14 @@ function Button() {
   return (
     <div className='border relative h-screen w-screen flex justify-center items-center'>
       <button className='absolute bottom-12 right-4'>
+
         <div className='outerBox rounded-3xl relative h-[40px] w-[40px] border overflow-hidden flex justify-center items-center'>
           <div
             className='innerBox relative h-[30px] w-[30px] overflow-hidden'
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{
-              transform: `translate(${moveX}px, ${moveY}px) scale(1.04)`,
+              transform: `translate(${moveX}px, ${moveY}px)`,
               transition: '0.25s ease-out'
             }}
           >
@@ -58,7 +59,6 @@ function Button() {
               <img
                 src="/arrowPurple.png"
                 className='block w-full h-full pointer-events-none select-none'
-                draggable="false"
               />
             </div>
           </div>
