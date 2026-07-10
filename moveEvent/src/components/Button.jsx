@@ -28,6 +28,8 @@ function Button() {
     setPosition({ x, y })
   }
   
+const moveX = (position.x - center) * 0.3
+  const moveY = (position.y - center) * 0.3
 
   return (
     <div className='relative h-screen  w-screen flex justify-center items-center'>
