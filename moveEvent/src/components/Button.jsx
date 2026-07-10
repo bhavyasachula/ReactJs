@@ -7,13 +7,12 @@ function Button() {
   const center = boxSize / 2
 
   const [position, setPosition] = useState({
-    x:center ,
+    x: center,
     y: center,
   })
-  const handleMouseLeave=(e)=>{
-    
-    setPosition({x:center,y:center})
-    
+
+  const handleMouseLeave = () => {
+    setPosition({ x: center, y: center })
   }
 
   const handleMouseMove = (e) => {
@@ -22,52 +21,52 @@ function Button() {
     let x = e.clientX - rect.left
     let y = e.clientY - rect.top
 
-    
     x = Math.max(half, Math.min(x, rect.width - half))
     y = Math.max(half, Math.min(y, rect.height - half))
 
     setPosition({ x, y })
   }
-  
-const moveX = (position.x - center) * 0.3
+
+  // inner box will move a little based on arrow movement
+  const moveX = (position.x - center) * 0.3
   const moveY = (position.y - center) * 0.3
 
   return (
-    <div className='relative h-screen  w-screen flex justify-center items-center'>
-        <button className='absolute bottom-12 right-4'>
-    <div className='innerBox relative h-[40px] w-[40px] border overflow-hidden flex justify-center items-center'
-      onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}>
-           style={{
-              transform: `translate(${moveX}px, ${moveY}px)`,
-              transition: '0.26s ease-out'
+    <div className='border relative h-screen w-screen flex justify-center items-center'>
+      <button className='absolute bottom-12 right-4'>
+        <div className='outerBox rounded-3xl relative h-[40px] w-[40px] border overflow-hidden flex justify-center items-center'>
+          <div
+            className='innerBox relative h-[30px] w-[30px] overflow-hidden'
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{
+              transform: `translate(${moveX}px, ${moveY}px) scale(1.04)`,
+              transition: '0.25s ease-out'
             }}
-      <div
-        className='innerBox relative h-[30px] w-[30px]  overflow-hidden '
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div
-          className='absolute '
-          style={{
-            left: `${position.x}px`,
-            top: `${position.y}px`,
-            width: `${arrowSize}px`,
-            height: `${arrowSize}px`,
-            transform: 'translate(-50%, -50%)',
-            transition:'0.26s ease-out'
-          }}
-        >
-          <img
-            src="/arrowPurple.png"
-            className='block w-full h-full'
-          />
+          >
+            <div
+              className='absolute'
+              style={{
+                left: `${position.x}px`,
+                top: `${position.y}px`,
+                width: `${arrowSize}px`,
+                height: `${arrowSize}px`,
+                transform: 'translate(-50%, -50%)',
+                transition: '0.25s ease-out'
+              }}
+            >
+              <img
+                src="/arrowPurple.png"
+                className='block w-full h-full pointer-events-none select-none'
+                draggable="false"
+              />
+            </div>
+          </div>
+
         </div>
-      </div>
-    </div>  
-    </button>
+      </button>
     </div>
   )
 }
 
-export default Button;
+export default Button
