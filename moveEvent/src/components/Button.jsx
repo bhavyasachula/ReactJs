@@ -57,7 +57,7 @@ function Button() {
               }}
             >
               <img
-                src="/eye.png"
+                src="/circle.png"
                 className='block w-full h-full pointer-events-none select-none'
               />
             </div>
