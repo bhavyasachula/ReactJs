@@ -35,7 +35,7 @@ function Button() {
     <div className='border relative h-screen w-screen flex justify-center items-center'>
       <button className='absolute bottom-12 right-4'>
 
-        <div className='outerBox rounded-3xl relative h-[40px] w-[40px] border overflow-hidden flex justify-center items-center'>
+        <div className='outerBox rounded-3xl relative h-[40px] w-[40px]  overflow-hidden flex justify-center items-center'>
           <div
             className='innerBox relative h-[30px] w-[30px] overflow-hidden'
             onMouseMove={handleMouseMove}
@@ -57,7 +57,7 @@ function Button() {
               }}
             >
               <img
-                src="/arrowPurple.png"
+                src="/eye.png"
                 className='block w-full h-full pointer-events-none select-none'
               />
             </div>
