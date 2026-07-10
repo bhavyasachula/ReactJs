@@ -30,7 +30,7 @@ function Button() {
 
   return (
     <div className='relative h-screen  w-screen flex justify-center items-center'>
-        <button className='absolute bottom-12 right-4'>
+       
     <div className='innerBox relative h-[40px] w-[40px] border overflow-hidden flex justify-center items-center'>
       <div
         className='innerBox relative h-[30px] w-[30px]  overflow-hidden '
@@ -38,7 +38,7 @@ function Button() {
         onMouseLeave={handleMouseLeave}
       >
         <div
-          className='absolute '
+          className='absolute'
           style={{
             left: `${position.x}px`,
             top: `${position.y}px`,
@@ -54,8 +54,9 @@ function Button() {
           />
         </div>
       </div>
+    
     </div>  
-    </button>
+  
     </div>
   )
 }
