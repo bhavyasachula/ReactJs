@@ -37,7 +37,7 @@ function Button() {
 
         <div className='outerBox rounded-3xl relative h-[40px] w-[40px]  overflow-hidden flex justify-center items-center'>
           <div
-            className='innerBox bg-purple-200 relative h-[30px] w-[30px] overflow-hidden'
+            className='innerBox  relative h-[30px] w-[30px] overflow-hidden'
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{
