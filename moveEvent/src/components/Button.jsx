@@ -4,14 +4,15 @@ function Button() {
   const boxSize = 30
   const arrowSize = 10
   const half = arrowSize / 2
+  const center = boxSize / 2
 
   const [position, setPosition] = useState({
-    x: boxSize / 2,
-    y: boxSize / 2,
+    x:center ,
+    y: center,
   })
   const handleMouseLeave=(e)=>{
     
-    setPosition({x:15,y:15})
+    setPosition({x:center,y:center})
     
   }
 
