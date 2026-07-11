@@ -37,7 +37,7 @@ function Button() {
    
       <button className='absolute bottom-12 right-4'>
 
-        <div className='outerBox rounded-3xl relative h-[40px] w-[40px]  border overflow-hidden flex justify-center items-center'>
+        <div className='outerBox rounded-3xl relative h-[50px] w-[50px]  border overflow-hidden flex justify-center items-center'>
          
           <div
             className='innerBox  relative h-[30px] w-[30px] overflow-hidden'
