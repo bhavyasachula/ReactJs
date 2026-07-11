@@ -35,14 +35,14 @@ function Button() {
     <div className='border relative h-screen w-screen flex justify-center items-center'>
       <button className='absolute bottom-12 right-4'>
 
-        <div className='outerBox rounded-3xl relative h-[40px] w-[40px]  overflow-hidden flex justify-center items-center'>
+        <div className='outerBox rounded-3xl relative h-[40px] w-[40px]  border overflow-hidden flex justify-center items-center'>
           <div
             className='innerBox  relative h-[30px] w-[30px] overflow-hidden'
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{
               transform: `translate(${moveX}px, ${moveY}px)`,
-              transition: '0.25s ease-out'
+              transition: '0.5s ease-out'
             }}
           >
             <div
@@ -53,7 +53,7 @@ function Button() {
                 width: `${arrowSize}px`,
                 height: `${arrowSize}px`,
                 transform: 'translate(-50%, -50%)',
-                transition: '0.25s ease-out'
+                transition: '0.5s ease-out'
               }}
             >
               <img
