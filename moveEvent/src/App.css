@@ -11,7 +11,7 @@
 }
 
 .outerBox{
-      background-image: url("/RealEye.png");
+    background-image: url("/RealEye.png");
     background-size: cover;
     background-position: center;
    border-radius: 20px; 

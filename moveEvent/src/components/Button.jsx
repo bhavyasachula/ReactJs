@@ -34,11 +34,8 @@ function Button() {
   return (
     
     <div className='border relative h-screen w-screen flex justify-center items-center'>
-   
       <button className='absolute bottom-12 right-4'>
-
-        <div className='outerBox rounded-3xl relative h-[50px] w-[50px]  border overflow-hidden flex justify-center items-center'>
-         
+        <div className='outerBox  relative h-[50px] w-[50px]  border overflow-hidden flex justify-center items-center'>
           <div
             className='innerBox  relative h-[30px] w-[30px] overflow-hidden'
             onMouseMove={handleMouseMove}
