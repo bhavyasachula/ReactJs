@@ -32,10 +32,16 @@ function Button() {
   const moveY = (position.y - center) * 0.3
 
   return (
+    
     <div className='border relative h-screen w-screen flex justify-center items-center'>
+   
       <button className='absolute bottom-12 right-4'>
 
         <div className='outerBox rounded-3xl relative h-[40px] w-[40px]  border overflow-hidden flex justify-center items-center'>
+          <img
+                src="/irisImage.jpeg"
+                className='block w-[50px] h-[50px] pointer-events-none select-none'
+              />
           <div
             className='innerBox  relative h-[30px] w-[30px] overflow-hidden'
             onMouseMove={handleMouseMove}

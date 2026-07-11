@@ -1,5 +1,6 @@
 .innerBox{
-    border-radius:40px
+    border-radius:40px;
+    z-index: 2;
 }
 .innerBox:hover{
     transition: 0.4s ease-out;
@@ -7,6 +8,6 @@
 }
 
 .outerBox{
-    border-radius: 20px;
-    box-shadow: outset 0px 10px 20px 3px rgba(199, 36, 214, 0.473);
+   
+    border-radius: 20px; 
 }
