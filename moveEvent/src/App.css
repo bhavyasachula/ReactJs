@@ -1,8 +1,6 @@
 .innerBox{
     border-radius:40px;
-     background-image: url("/irisImage.jpeg");
-    background-size: cover;
-    background-position: center;
+   
     
 }
 .innerBox:hover{
@@ -12,6 +10,8 @@
 }
 
 .outerBox{
-  
+    background-image: url("/RealEye.png");
+    background-size: cover;
+    background-position: center;
    border-radius: 20px; 
 }
