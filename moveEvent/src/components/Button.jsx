@@ -26,6 +26,9 @@ function Button() {
 
     setPosition({ x, y })
   }
+  function handleclick(){
+
+  }
 
   // inner box will move a little based on arrow movement
   const moveX = (position.x - center) * 0.3
@@ -33,8 +36,9 @@ function Button() {
 
   return (
     
-    <div className='border relative h-screen w-screen flex justify-center items-center'>
-      <button className='absolute bottom-12 right-4'>
+    <div className='border relative h-screen w-screen '>
+      
+      <button className='absolute bottom-12 right-4' onClick={handleclick}>
         <div className='outerBox  relative h-[50px] w-[50px] overflow-hidden flex justify-center items-center'>
           <div
             className='innerBox  relative h-[30px] w-[30px] overflow-hidden'
