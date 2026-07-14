@@ -26,9 +26,6 @@ function Button() {
 
     setPosition({ x, y })
   }
-  function handleclick(){
-    sethello(prev=>!prev);
-  }
 
   // inner box will move a little based on arrow movement
   const moveX = (position.x - center) * 0.3
