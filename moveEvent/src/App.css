@@ -1,18 +1,20 @@
-.innerBox{
-    border-radius:40px;
-     background-image: url("/innerEyeRemoved.png");
-    background-size: cover;
-    background-position: center;
-    
-}
 .innerBox:hover{
     transition: 0.4s ease-out;
      /* box-shadow: 0px 10px 20px 3px rgba(199, 36, 214, 0.473);  */
 }
 
+
 .outerBox{
-    background-image: url("/RealEye.png");
+    background-image: url("/outerEye.png");
     background-size: cover;
     background-position: center;
-   border-radius: 24px; 
+    border-radius: 24px;
+}
+.innerBox{
+    border-radius: 40px;
+    background-image: url("/innerEyeRemoved.png");
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.08s linear; /* small smoothing, NOT 0.5s */
+    will-change: transform;
 }
