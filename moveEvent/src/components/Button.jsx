@@ -10,7 +10,7 @@ function Button() {
     x: center,
     y: center,
   })
-
+  const [hello,sethello] =  useState(true);
   const handleMouseLeave = () => {
     setPosition({ x: center, y: center })
   }
@@ -27,7 +27,7 @@ function Button() {
     setPosition({ x, y })
   }
   function handleclick(){
-
+    sethello(prev=>!prev);
   }
 
   // inner box will move a little based on arrow movement
@@ -37,7 +37,7 @@ function Button() {
   return (
     
     <div className='border relative h-screen w-screen '>
-      
+    <div>{}</div>
       <button className='absolute bottom-12 right-4' onClick={handleclick}>
         <div className='outerBox  relative h-[50px] w-[50px] overflow-hidden flex justify-center items-center'>
           <div
