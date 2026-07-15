@@ -3,17 +3,20 @@
     border: 2px solid red;
     display: flex;
     width: 90%;
+    overflow-x: auto;
+}
+.Caraousal::-webkit-scrollbar{
+    display: none;
 }
 .Group{
-    margin:6px;
     display: flex;
-
+    animation:spin 5s infinite;
 }
 .card{
+    border-radius: 4px;
     flex:0 0 5em;
     background-color: lightblue;
-    margin: 5px;
-    border: 1px solid black;
+    margin: 4px;
     height: 5em;
     padding: 1em;
     text-align: center ;
