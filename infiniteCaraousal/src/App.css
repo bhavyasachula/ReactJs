@@ -1,26 +1,33 @@
 .Caraousal{
     margin: auto;
-    height: 100px;
     display: flex;
-    width: 60%;
+    width: 50%;
     overflow:hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 10px rgba(231, 6, 6, 0.15);
+    border-radius: 10px;
 }
-.Caraousal::-webkit-scrollbar{
+::-webkit-scrollbar{
     display: none;
 }
+
 .Group{
     display: flex;
     align-items: center;
     justify-content: center;
-    animation:spin 5s infinite linear;
+    animation:spin 7s infinite linear;
     padding-right: 1em;
     gap:1em;
 }
 .card{
-    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
     flex:0 0 5em;
-    background-color: rgb(173, 230, 176);
+    padding:6px;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
     margin: 2px;
     height: 6em;
     text-align: center ;
@@ -29,4 +36,8 @@
 @keyframes spin {
     from{transform: translate(0);}
     to{transform: translate(-100%);}
+}
+img{
+    height: 20px;
+    width: 20px;
 }
