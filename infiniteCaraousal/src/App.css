@@ -1,0 +1,21 @@
+.Caraousal{
+    margin: 5px;
+    border: 2px solid red;
+    display: flex;
+    width: 90%;
+}
+.Group{
+    margin:6px;
+    display: flex;
+
+}
+.card{
+    flex:0 0 5em;
+    background-color: lightblue;
+    margin: 5px;
+    border: 1px solid black;
+    height: 5em;
+    padding: 1em;
+    text-align: center ;
+    align-content: center;
+}
