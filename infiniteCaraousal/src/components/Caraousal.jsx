@@ -5,20 +5,20 @@ function Caraousal() {
     <>
     <div className='Caraousal'>
         <div className='Group'>
-            <div className="card">1</div>
-            <div className="card">2</div>
-            <div className="card">3</div>
-            <div className="card">4</div>
-            <div className="card">5</div>
-            <div className="card">6</div>
+             <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="" /></div>   
+            <div className="card"><img src='https://cdn-icons-png.flaticon.com/512/5968/5968958.png' alt="" /></div>
+            <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968776.png" alt="" /></div>
+            <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/732/732217.png" alt="" /></div>
+            <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/888/888835.png" alt="" /></div>
+            <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968382.png" alt="" /></div>
         </div>
          <div className='Group'>
-            <div className="card">1</div>   
-            <div className="card">2</div>
-            <div className="card">3</div>
-            <div className="card">4</div>
-            <div className="card">5</div>
-            <div className="card">6</div>
+             <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="" /></div>   
+            <div className="card"><img src='https://cdn-icons-png.flaticon.com/512/5968/5968958.png' alt="" /></div>
+            <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968776.png" alt="" /></div>
+            <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/732/732217.png" alt="" /></div>
+            <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/888/888835.png" alt="" /></div>
+            <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968382.png" alt="" /></div>
         </div>
     </div>
     </>
