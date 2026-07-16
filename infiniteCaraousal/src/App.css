@@ -22,7 +22,7 @@ background: red;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation:spin 7s infinite linear;
+    animation:spin 15s infinite linear;
     padding-right: 1em;
     gap:1em;
 }
@@ -41,8 +41,9 @@ background: red;
     align-content: center;
 }
 
-img{
-    transform: scale(1);
+img:hover{
+    transition: 0.3s ease-out;
+    transform: scale(1.2);
 }
 
 
