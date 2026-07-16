@@ -1,11 +1,11 @@
 
 body{
  user-select: none;
- background: #333;
+
 }
 
 .Caraousal{
-    
+    background: white;
     margin: 20px auto;
     display: flex;
     width: 50%;
