@@ -10,12 +10,14 @@ body{
     display: flex;
     width: 50%;
     overflow:hidden;
-    box-shadow: 0px 4px 10px rgba(152, 6, 231, 0.15);
+    box-shadow: 0px 2px 10px rgba(99, 90, 104, 0.15); 
+    /* box-shadow: 0px 4px 10px rgba(152, 6, 231, 0.15); */
     border-radius: 10px;
 }
 ::-webkit-scrollbar{
     display: none;
 }
+
 .Group{
     display: flex;
     align-items: center;
