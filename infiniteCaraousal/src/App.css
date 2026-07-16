@@ -32,12 +32,11 @@ background: red;
     align-items: center;
     border-radius: 4px;
     flex:0 0 4em;
-    padding:6px;
     background-size: cover;
     object-fit: cover;
     background-position: center;
     margin: 2px;
-    height: 6em;
+    height: 4em;
     text-align: center ;
     align-content: center;
 }
