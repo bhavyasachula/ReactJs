@@ -19,7 +19,7 @@ function Caraousal() {
             <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/732/732217.png" alt="" /></div>
             <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/888/888835.png" alt="" /></div>
             <div className="card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968382.png" alt="" /></div>
-        
+            <div className="card"></div>
         </div>
     </div>
     </>
