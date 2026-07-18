@@ -1,6 +1,6 @@
 
 body{
-    user-select: none;
+ user-select: none;
     background-color: #f7f6fb;
     background-image:
         radial-gradient(circle, #d8d3ea 1px, transparent 1px),
