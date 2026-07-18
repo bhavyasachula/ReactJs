@@ -1,7 +1,12 @@
 
 body{
- user-select: none;
-background: #f5f5f7;
+    user-select: none;
+    background-color: #f7f6fb;
+    background-image:
+        radial-gradient(circle, #d8d3ea 1px, transparent 1px),
+        linear-gradient(135deg, #eeecf9 0%, #f7f6fb 60%);
+    background-size: 22px 22px, 100% 100%;
+    padding: 40px 0;
 }
 
 .Caraousal{
