@@ -52,14 +52,12 @@ img:hover{
     transform: scale(1.2);
 }
 
-
 @keyframes spin {
-    
     from{
         transform: translate(0);
     }
     to{
-        transform: translate(-100%);
+        transform: translate(100%);
     }
 }
 img{
