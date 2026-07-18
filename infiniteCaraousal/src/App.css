@@ -4,13 +4,12 @@ body{
     background-color: #f7f6fb;
     background-image:
         radial-gradient(circle, #d8d3ea 1px, transparent 1px),
-        linear-gradient(135deg, #fbfbfc 0%, #f2f2f5 60%);
+        linear-gradient(135deg, #fbfbfc 0%, #f7f5f5 60%);
     background-size: 22px 22px, 100% 100%;
     padding: 40px 0;
 }
 
 .Caraousal{
-     
     mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
     background:white;
     margin: 20px auto;
