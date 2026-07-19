@@ -39,7 +39,7 @@ function Caraousal() {
             <div className="card"><img src="https://companiesmarketcap.com/img/company-logos/64/SPCX.webp" alt="" /></div>
             <div className="card"><img src="https://companiesmarketcap.com/img/company-logos/64/TSLA.webp" alt="" /></div>
             <div className="card"><img src="https://companiesmarketcap.com/img/company-logos/64/TCS.NS.webp" alt="" /></div>
-            <div className="card"><img src="	https://specials-images.forbesimg.com/dam/imageser…700x0.png?cropX1=0&cropX2=700&cropY1=0&cropY2=700" alt="" /></div>
+            <div className="card"><img src="https://specials-images.forbesimg.com/dam/imageser…700x0.png?cropX1=0&cropX2=700&cropY1=0&cropY2=700" alt="" /></div>
         </div>
     </div>  
     </>
