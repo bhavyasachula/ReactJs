@@ -8,6 +8,6 @@ const wss = new WebSocketServer({server:httpServer});
 wss.on("connection",(ws)=>{
     //whenever there is a connection control should reach here!
     ws.on("error",console.error);
-    ws
+    ws.on("message")
     
 })
