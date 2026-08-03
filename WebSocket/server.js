@@ -1,2 +1,2 @@
-import {WebSocketServer} from 'ws';
+import {WebSocketServer,WebSocket} from 'ws';
 
