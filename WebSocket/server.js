@@ -5,4 +5,4 @@ const httpServer = app.listen(8080);
 
 const wss = new WebSocketServer({server:httpServer});
 
-console.log(wss);
+wss.on("connection",(WebSocket))
