@@ -5,4 +5,7 @@ const httpServer = app.listen(8080);
 
 const wss = new WebSocketServer({server:httpServer});
 
-wss.on("connection",(WebSocket))
+wss.on("connection",(ws)=>{
+    ws.on("error",console.error);
+    
+})
