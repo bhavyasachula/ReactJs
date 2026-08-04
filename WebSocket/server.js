@@ -12,7 +12,13 @@ app.get("/",(req,res)=>{
         <input id="msg" placeholder="Type a message..." />
         <button onclick="send()">Send</button>
         <ul id="log"></ul>
-        <script>`)
+        <script>
+         const ws = new WebSocket('ws://' + location.host);
+          ws.onmessage = e => {
+            const li = document.createElement('li');
+            li.textContent = e.data;
+            document.getElementById('log').appendChild(li);
+          };`)
 })
 wss.on("connection",(ws)=>{
     //whenever there is a connection control should reach here!
