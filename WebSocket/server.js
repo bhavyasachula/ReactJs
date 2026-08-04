@@ -5,6 +5,9 @@ const httpServer = app.listen(8080);
 
 const wss = new WebSocketServer({server:httpServer});
 
+app.get("/",(req,res)=>{
+    
+})
 wss.on("connection",(ws)=>{
     //whenever there is a connection control should reach here!
     ws.on("message",(data,isBinary)=>{
