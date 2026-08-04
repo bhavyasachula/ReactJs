@@ -8,9 +8,9 @@ const wss = new WebSocketServer({server:httpServer});
 wss.on("connection",(ws)=>{
     //whenever there is a connection control should reach here!
     ws.on("message",(data,isBinary)=>{
-        // wss.clients.forEach((client)=>{
-        //     client.send(data,{binary:isBinary})
-        // })
+        wss.clients.forEach((client)=>{
+            client.send(data,{binary:isBinary})
+        })
         console.log("recieved %s",data);
     })
     
