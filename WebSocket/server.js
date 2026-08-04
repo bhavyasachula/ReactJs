@@ -18,7 +18,15 @@ app.get("/",(req,res)=>{
             const li = document.createElement('li');
             li.textContent = e.data;
             document.getElementById('log').appendChild(li);
-          };`)
+          };function send() {
+            const input = document.getElementById('msg');
+            ws.send(input.value);
+            input.value = '';
+          }
+        </script>
+      </body>
+    </html>
+  ``)
 })
 wss.on("connection",(ws)=>{
     //whenever there is a connection control should reach here!
