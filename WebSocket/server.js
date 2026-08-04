@@ -32,6 +32,7 @@ wss.on("connection",(ws)=>{
     console.log("Client connected")
     //whenever there is a connection control should reach here!
     ws.on("message",(data,isBinary)=>{
+        console.log('Received:', data.toString());
         wss.clients.forEach((client)=>{
             client.send(data,{binary:isBinary})
         })
