@@ -26,7 +26,7 @@ app.get("/",(req,res)=>{
         </script>
       </body>
     </html>
-  ``)
+  `)
 })
 wss.on("connection",(ws)=>{
     //whenever there is a connection control should reach here!
