@@ -29,6 +29,7 @@ app.get("/",(req,res)=>{
   `)
 })
 wss.on("connection",(ws)=>{
+    console.log
     //whenever there is a connection control should reach here!
     ws.on("message",(data,isBinary)=>{
         wss.clients.forEach((client)=>{
