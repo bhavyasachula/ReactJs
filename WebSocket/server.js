@@ -7,9 +7,12 @@ const wss = new WebSocketServer({server:httpServer});
 
 wss.on("connection",(ws)=>{
     //whenever there is a connection control should reach here!
-    ws.on("error",console.error);
     ws.on("message",(data,isBinary)=>{
-        wss.clients.forEach()
+        // wss.clients.forEach((client)=>{
+        //     client.send(data,{binary:isBinary})
+        // })
+        console.log("recieved %s",data);
     })
     
+    ws.send("hi from client 1");
 })
